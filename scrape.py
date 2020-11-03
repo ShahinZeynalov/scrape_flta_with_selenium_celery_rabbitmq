@@ -38,8 +38,6 @@ class FltaScraper():
                 count_urls += 1
                 link = td.find_element_by_tag_name('a').get_attribute('href')
                 res = scrape_data.delay(link, self.file_name)
-                break
-            break
         print(f'Totally {count_urls} urls crawled and sent to celery for processing. Have a good day :)')
     
 
